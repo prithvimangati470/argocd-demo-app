@@ -4,13 +4,17 @@ metadata:
   name: demo-app
   namespace: argocd
 spec:
+  project: default   # 👈 THIS WAS MISSING
+
   source:
     repoURL: https://github.com/prithvimangati470/argocd-demo-app.git
     targetRevision: main
     path: k8s
+
   destination:
     server: https://kubernetes.default.svc
     namespace: demo
+
   syncPolicy:
     automated:
       selfHeal: true
