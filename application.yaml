@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   source:
-    repoURL: https://github.com/<your-username>/argocd-demo-app
+    repoURL: https://github.com/prithvimangati470/argocd-demo-app.git
     targetRevision: main
     path: k8s
   destination:
